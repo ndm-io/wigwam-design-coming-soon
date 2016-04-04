@@ -1,0 +1,19 @@
+{
+  "name": "wigwam-design-coming-soon",
+  "version": "0.1.0",
+  "description": "Wigwam Design Coming Soon Page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndm-io/wigwam-design-coming-soon.git"
+  },
+  "author": "Rob Atherton <robather@googlemail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndm-io/wigwam-design-coming-soon/issues"
+  },
+  "homepage": "https://github.com/ndm-io/wigwam-design-coming-soon#readme"
+}
