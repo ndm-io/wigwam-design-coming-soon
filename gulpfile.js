@@ -37,4 +37,13 @@ var defaults = ['scripts',
     'watch'
 ];
 
+var build = [
+    'scripts',
+    'html',
+    'css',
+    'assets',
+    'img'
+];
+
+gulp.task('build', build);
 gulp.task('default', defaults);
