@@ -25,7 +25,7 @@ var http = require('http').Server(app);
  */
 
 var port = process.env.PORT || 8080;
-var root = path.join(__dirname, 'public');
+//var root = path.join(__dirname, 'public');
 
 /**
  * Express configuration.

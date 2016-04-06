@@ -36,17 +36,12 @@ node_modules
 
 .DS_Store
 
-###
-### Uncomment these for production push
-###
+
 # Source Files
-#src
+src
 
 # Build workflow
-#gulp*
+gulp*
 
-###
-### Comment these out for production push
-###
 
-public
+#public
