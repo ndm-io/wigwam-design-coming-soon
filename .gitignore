@@ -38,10 +38,10 @@ node_modules
 
 
 # Source Files
-src
+#src
 
 # Build workflow
-gulp*
+#gulp*
 
 
 #public
