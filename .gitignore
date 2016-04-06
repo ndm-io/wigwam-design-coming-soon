@@ -32,8 +32,18 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
+
+###
+### Uncomment these for production push
+###
 # Source Files
-src
+#src
 
 # Build workflow
-gulp*
+#gulp*
+
+###
+### Comment these out for production push
+###
+
+public
