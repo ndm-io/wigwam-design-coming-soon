@@ -28,6 +28,8 @@ gulp.task('watch', function () {
     gulp.watch(homePaths.assets.src, ['assets']);
 });
 
+gulp.task.('heroku:production', ['scripts', 'html', 'css', 'img', 'assets']);
+
 var defaults = ['scripts',
     'html',
     'css',
