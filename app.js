@@ -52,6 +52,7 @@ var r = require('./routes'),
 
 app.get(routes.index.route, r.routeHandler(routes.index.path));
 app.get(routes.about.route, r.routeHandler(routes.about.path));
+app.get(routes.contact.route, r.routeHandler((routes.contact.path)));
 
 
 /**

@@ -17,10 +17,17 @@
     <link href="css/vortex.style.min.css" rel="stylesheet">
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-76039939-1', 'auto');
         ga('send', 'pageview');
@@ -37,82 +44,20 @@
 <!-- /PRELOADER -->
 
 <!-- OVERLAY MENU -->
-<div id="overlay-menu" class="overlay-menu">
-
-    <a href="index.html#" id="overlay-menu-hide" class="navigation-hide"><i class="ion-close-round"></i></a>
-
-    <div class="overlay-menu-inner">
-        <nav class="overlay-menu-nav">
-            <ul id="nav">
-
-                <li><a href="/">Home</a></li>
-                <li><a href="about">About</a></li>
-
-            </ul>
-        </nav>
-    </div>
-
-    <div class="overlay-navigation-footer">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-12 text-center">
-                    <p class="copyright font-alt m-b-0">© 2016 wigwam.design, All Rights Reserved.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+<div class="menu"></div>
 <!-- /OVERLAY MENU -->
+
 <!-- WRAPPER -->
 <div class="wrapper">
 
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
+    <div class="navigation"
+         data-options="navbar-custom navbar-transparent"
+         data-logo="assets/images/svg/logo_wigwam_compact_white_100x35.svg">
 
-        <div class="container">
-
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">
-                    <img src="assets/images/svg/logo_wigwam_compact_white_100x35.svg" width="95" alt="">
-                </a>
-            </div>
-
-            <!-- ICONS NAVBAR -->
-            <ul id="icons-navbar" class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html#" id="toggle-menu" class="show-overlay" title="Menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                </li>
-            </ul>
-            <!-- /ICONS NAVBAR -->
-
-            <ul class="extra-navbar nav navbar-nav navbar-right">
-                <li>
-                    <a href="/" title="Menu">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/about" title="Menu">
-                        About
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-
-    </nav>
+    </div>
     <!-- /NAVIGATION -->
+
     <!-- HERO -->
     <section id="hero" class="module-hero module-parallax module-full-height bg-dark-60"
              data-background="assets/images/section-5.jpg">
@@ -371,39 +316,9 @@
             <!-- /PORTFOLIO -->
         </div>
     </section>
+
     <!-- FOOTER -->
-    <footer class="module bg-light">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <ul class="social-text-links font-alt text-center m-b-20">
-                        <li><a href="https://www.instagram.com/wigwam.design/">Instagram</a></li>
-                        <li><a href="https://twitter.com/wigwamdesign" target="_blank">Twitter</a></li>
-                        <li><a href="https://uk.pinterest.com/wigwamdesign/" target="_blank">Pinterest</a></li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <p class="copyright text-center m-b-0">© 2016 <a href="#">wigwam.design</a>, All Rights Reserved.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </footer>
+    <div class="footer"></div>
     <!-- /FOOTER -->
 
 </div>

@@ -1,4 +1,13 @@
 var paths = {
+    browserify: {
+        src: 'src/scripts/app.js',
+        watch: [
+            'src/scripts/*.js',
+            'src/scripts/**/**/*.js',
+            'src/scripts/**/*.html'
+        ],
+        dest: 'public/js'
+    },
     scripts: {
         src: 'src/js/**/*.js',
         dest: 'public/js'

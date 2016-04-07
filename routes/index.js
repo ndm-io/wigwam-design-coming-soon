@@ -11,6 +11,10 @@ exports.routes = {
         path: path.join(__dirname, '../public/html/about.html'),
         route: '/about'
     },
+    contact: {
+        path:path.join(__dirname, '../public/html/contact.html'),
+        route: '/contact'
+    },
     error: {
         path: path.join(__dirname, '../public/html/error.html'),
         route: '/error'
