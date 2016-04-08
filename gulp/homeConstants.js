@@ -8,10 +8,6 @@ var paths = {
         ],
         dest: 'public/js'
     },
-    secrets: {
-        src: 'config/secrets.js',
-        dest:'config/'
-    },
     scripts: {
         src: 'src/js/**/*.js',
         dest: 'public/js'
