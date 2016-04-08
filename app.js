@@ -18,7 +18,7 @@ var connectAssets = require('connect-assets');
 var app = express();
 var http = require('http').Server(app);
 
-var contactController = require(path.join(__dirname, 'controllers/ContactController'));
+var contactController = require(path.join(__dirname, 'controllers/ContactController.js'));
 var port = process.env.PORT || 8080;
 
 
