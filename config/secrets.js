@@ -1,13 +1,15 @@
 
 module.exports = {
     twilio: {
-        accountSID:process.env.twilioAccountSID,
-        authToken:process.env.twilioAuthToken,
+        accountSID:process.env.TWILIO_ACCOUNT_SID,
+        authToken:process.env.TWILIO_AUTH_TOKEN,
         numbers: {
             contact:process.env.twilioNumberContact
         },
         notify:{
-            sam:process.env.twilioNotifySam
+            sam:process.env.twilioNotifySam,
+            rob:process.env.twilioNotifyRob,
+            default:process.env.twilioNotifyDefault
         }
     }
 };

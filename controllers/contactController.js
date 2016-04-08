@@ -7,7 +7,7 @@ var secrets = require('../config/secrets').twilio,
     MAX_MESSAGE_LEN = 200,
     re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-var client = new twilio.RestClient(secrets.accountSID, secrets.authToken);
+var client = new twilio.RestClient();
 
 var trim = function (str, len) {
     return (str.length > len) ? str.substring(0, len - 3) + "..." : str.substring(0, len);
@@ -47,14 +47,15 @@ exports.postContact = function (req, res) {
     if (msg) {
 
         client.messages.create({
-                to: secrets.contactNumber,
+                to: secrets.notify.default,
                 from: secrets.numbers.contact,
                 body: msg
             })
             .then(function () {
                 res.send({status: 'success', messages: ['Thank you for your message, we will be in touch right away']});
             })
-            .catch(function () {
+            .catch(function (err) {
+                console.log(err);
                 res.send({status: 'fail', messages: ['Something bad happened and we could not send the message']});
             });
 
