@@ -8,12 +8,16 @@ var paths = {
         ],
         dest: 'public/js'
     },
+    secrets: {
+        src: 'config/secrets.js',
+        dest:'config/'
+    },
     scripts: {
         src: 'src/js/**/*.js',
         dest: 'public/js'
     },
     html: {
-        src: ['src/html/**/*.html','!./src/html/partials/*'],
+        src: ['src/html/**/*.html', '!./src/html/partials/*'],
         dest: 'public/html'
     },
     htmlPartials: {

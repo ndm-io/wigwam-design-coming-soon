@@ -41,7 +41,6 @@ var formatMessage = function (data) {
 
 exports.postContact = function (req, res) {
 
-
     var data = dataFromBody(req.body);
     var msg = formatMessage(data);
 
@@ -62,6 +61,5 @@ exports.postContact = function (req, res) {
     } else {
         res.send({status: 'fail', messages: ['Some information is missing to enable us to make contact']});
     }
-
 
 };
