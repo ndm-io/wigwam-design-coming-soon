@@ -1,29 +1,50 @@
 'use strict';
 
 var $ = require('jquery'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    routes = require('../../../../../routes').routes,
+    dataValidator = require('./data-validator'),
+    display = require('./response-display'),
+    formData = require('./form-data');
 
-var forms = $('.contact-form');
-var tmpl = require('./contact-form.html');
+(function () {
 
-var html = $.parseHTML(tmpl);
+    var forms = $('.contact-form'),
+        tmpl = require('./contact-form.html');
 
-var submit = function (e) {
-    console.log('submit event',e);
-    e.preventDefault();
-};
+    var html = $.parseHTML(tmpl);
+
+    var submit = function (e) {
+
+        e.preventDefault();
+        var data = formData(e);
+        var errors = dataValidator.validate(data);
+        var response = $('.ajax-response')[0];
+        response.innerHTML = '';
+
+        var responseDisplay = display(response);
+
+        if (errors.length == 0) {
+            $.post(routes.postContact.route, data, function (response) {
+                responseDisplay(response.messages);
+            }, 'json');
+        } else {
+            responseDisplay(errors);
+        }
+
+    };
 
 
-_.each(forms, function (form) {
+    _.each(forms, function (form) {
 
-    var el = $(form);
-    el.append(html);
+        $(form)
+            .append(html)
+            .find('form')
+            .each(function (i, f) {
+                f.addEventListener('submit', submit);
+            });
 
-    el.find('form')
-        .each(function (i, f) {
-            f.addEventListener('submit', submit);
-        });
+    });
 
-    //.addEventListener('submit', submit);
 
-});
+})();

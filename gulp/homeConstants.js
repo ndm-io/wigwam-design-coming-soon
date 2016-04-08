@@ -48,7 +48,6 @@ var vortexScriptsOrder = [
     "appear.js",
     "jquery.easing.1.3.js",
     "wow.min.js",
-    "jqBootstrapValidation.js",
     "jquery.fitvids.js",
     "jquery.parallax-1.1.3.js",
     "smoothscroll.js",

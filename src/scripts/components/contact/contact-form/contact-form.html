@@ -1,23 +1,20 @@
-<form id="contact-form" class="contact-form" role="form" novalidate="">
+<form id="contact-form" role="form">
 
     <div class="form-group">
-        <label class="sr-only" for="cname">Name</label>
-        <input type="text" id="cname" class="form-control" name="cname" placeholder="Name*" required
-               data-validation-required-message="Please enter your name.">
+        <label class="sr-only" for="name">Name</label>
+        <input type="text" id="name" class="form-control" name="name" placeholder="Name*">
         <p class="help-block text-danger"></p>
     </div>
 
     <div class="form-group">
-        <label class="sr-only" for="cemail">Your Email</label>
-        <input type="email" id="cemail" name="cemail" class="form-control"
-               placeholder="Your E-mail*"
-               required data-validation-required-message="Please enter your email address.">
+        <label class="sr-only" for="email">Your Email</label>
+        <input type="email" id="email" name="email" class="form-control"
+               placeholder="Your E-mail*">
         <p class="help-block text-danger"></p>
     </div>
 
     <div class="form-group">
-                        <textarea class="form-control" id="cmessage" name="cmessage" rows="7" placeholder="Message*"
-                                  required data-validation-required-message="Please enter your message."></textarea>
+        <textarea class="form-control" id="message" name="message" rows="7" placeholder="Message*"></textarea>
         <p class="help-block text-danger"></p>
     </div>
 
