@@ -18,15 +18,9 @@ var connectAssets = require('connect-assets');
 var app = express();
 var http = require('http').Server(app);
 
-var contactController = require('./controllers/ContactController');
-
-/**
- * Port for Heroku compatability
- *
- */
-
+var contactController = require(path.join(__dirname, 'controllers/ContactController'));
 var port = process.env.PORT || 8080;
-//var root = path.join(__dirname, 'public');
+
 
 /**
  * Express configuration.
