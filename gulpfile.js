@@ -6,15 +6,13 @@ homePaths = require('./gulp/homeConstants').paths;
  * Home Site Tasks
  */
 
-var homeTaskSecrets = require('./gulp/home/taskSecrets'),
-    homeTaskScripts = require('./gulp/home/taskScripts'),
+var homeTaskScripts = require('./gulp/home/taskScripts'),
     homeTaskHtml = require('./gulp/home/taskHtml'),
     homeTaskCss = require('./gulp/home/taskCss'),
     homeTaskImg = require('./gulp/home/taskImg'),
     homeTaskAssets = require('./gulp/home/taskAssets'),
     homeTaskBrowserify = require('./gulp/home/taskBrowserify');
 
-gulp.task('secrets', homeTaskSecrets);
 gulp.task('scripts', homeTaskScripts);
 gulp.task('browserify', homeTaskBrowserify);
 gulp.task('html', homeTaskHtml);
