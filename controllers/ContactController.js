@@ -1,6 +1,6 @@
 'use strict';
 
-var secrets = require('../config/secrets').twilio,
+var // secrets = require('../config/secrets').twilio,
     striptags = require('striptags'),
     twilio = require('twilio'),
     MAX_DATA_LEN = 100,
@@ -47,8 +47,8 @@ exports.postContact = function (req, res) {
     if (msg) {
 
         client.messages.create({
-                to: secrets.notify.default,
-                from: secrets.numbers.contact,
+                to: process.env.TWILIO_NOTIFY_DEFAULT,
+                from: process.env.TWILIO_NUMBER_CONTACT,
                 body: msg
             })
             .then(function () {
