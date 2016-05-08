@@ -47,7 +47,7 @@ exports.postContact = function (req, res) {
     if (msg) {
 
         client.messages.create({
-                to: secrets.notify.notifyDefault,
+                to: secrets.notify.default,
                 from: secrets.numbers.contact,
                 body: msg
             })
