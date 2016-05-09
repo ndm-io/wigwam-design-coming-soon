@@ -31,6 +31,10 @@ var paths = {
     assets: {
         src: 'src/assets/**/*',
         dest: 'public/assets'
+    },
+    sitemap: {
+        src: 'src/*.xml',
+        dest: 'public'
     }
 };
 
