@@ -35,6 +35,10 @@ var paths = {
     sitemap: {
         src: 'src/*.xml',
         dest: 'public'
+    },
+    favicons: {
+        src: 'src/favicons/*',
+        dest: 'public'
     }
 };
 

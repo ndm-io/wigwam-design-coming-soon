@@ -21,10 +21,6 @@ exports.routes = {
     error: {
         path: path.join(__dirname, '../public/html/error.html'),
         route: '/error'
-    },
-    sitemap: {
-        path: path.join(__dirname, '../public/sitemap.xml'),
-        route: '/sitemap.xml'
     }
 };
 

@@ -12,7 +12,8 @@ var homeTaskScripts = require('./gulp/home/taskScripts'),
     homeTaskImg = require('./gulp/home/taskImg'),
     homeTaskAssets = require('./gulp/home/taskAssets'),
     homeTaskBrowserify = require('./gulp/home/taskBrowserify'),
-    homeTaskSitemap = require('./gulp/home/taskSitemap');
+    homeTaskSitemap = require('./gulp/home/taskSitemap'),
+    homeTaskFavicons = require('./gulp/home/taskFavicons');
 
 gulp.task('scripts', homeTaskScripts);
 gulp.task('browserify', homeTaskBrowserify);
@@ -21,6 +22,7 @@ gulp.task('css', homeTaskCss);
 gulp.task('img', homeTaskImg);
 gulp.task('assets', homeTaskAssets);
 gulp.task('sitemap', homeTaskSitemap);
+gulp.task('favicons', homeTaskFavicons);
 
 /**
  * Watch Tasks
@@ -42,7 +44,8 @@ var build = [
     'css',
     'assets',
     'img',
-    'sitemap'
+    'sitemap',
+    'favicons'
 ];
 
 var defaults = _.clone(build);
