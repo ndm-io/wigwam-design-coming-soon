@@ -2,9 +2,9 @@ var paths = {
     browserify: {
         src: 'src/scripts/app.js',
         watch: [
-            'src/scripts/*.js',
-            'src/scripts/**/**/*.js',
-            'src/scripts/**/*.html'
+        'src/scripts/*.js',
+        'src/scripts/**/**/*.js',
+        'src/scripts/**/*.html'
         ],
         dest: 'public/js'
     },
@@ -43,24 +43,24 @@ var paths = {
 };
 
 var vortexScriptsOrder = [
-    "jquery-2.1.3.min.js",
-    "bootstrap.min.js",
-    "jquery.superslides.min.js",
-    "jquery.mb.YTPlayer.min.js",
-    "jquery.magnific-popup.min.js",
-    "owl.carousel.min.js",
-    "jquery.simple-text-rotator.min.js",
-    "imagesloaded.pkgd.js",
-    "isotope.pkgd.min.js",
-    "packery-mode.pkgd.min.js",
-    "appear.js",
-    "jquery.easing.1.3.js",
-    "wow.min.js",
-    "jquery.fitvids.js",
-    "jquery.parallax-1.1.3.js",
-    "smoothscroll.js",
-    "contact.js",
-    "custom.js"
+"jquery-2.1.3.min.js",
+"bootstrap.min.js",
+"jquery.superslides.min.js",
+"jquery.mb.YTPlayer.min.js",
+"jquery.magnific-popup.min.js",
+"owl.carousel.min.js",
+"jquery.simple-text-rotator.min.js",
+"imagesloaded.pkgd.js",
+"isotope.pkgd.min.js",
+"packery-mode.pkgd.min.js",
+"appear.js",
+"jquery.easing.1.3.js",
+"wow.min.js",
+"jquery.fitvids.js",
+"jquery.parallax-1.1.3.js",
+"smoothscroll.js",
+"contact.js",
+"custom.js"
 ];
 
 module.exports.paths = paths;

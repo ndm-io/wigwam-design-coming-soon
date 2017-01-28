@@ -40,7 +40,7 @@ app.use(expressValidator());
 app.use(methodOverride());
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'public'), {maxAge: 31557600000}));
+app.use(express.static(path.join(__dirname, './public'), {maxAge: 31557600000}));
 
 var r = require('./routes'),
     routes = r.routes;
