@@ -1,19 +1,15 @@
 # wigwam-design-coming-soon
 
-Wigwam Design Coming Soon Page. Really simple coming soon page. 
-This design will inspire the full site
+This repo has become the main production site.
 
-<code>git push heroku master</code>
+To Deploy: <br>
+
+<code>git push production master</code>
 
 ### Edits
 
-A few different approaches have been tried with the deployment
-of this app. I have settled on heroku as this app is a short term 
-measure.
+Currently the main pages of the website are a bit of a mash.
 
-All the gulp generated files are .gitignore 'd and instead
-gulp is added as a project dependency (not devDependency) and a
-post install npm task is run.
-
-So far so good.
+It is my intention for the shop to be a react app, separate of the main site
+so I can just leave that alone and concentrate on the shop.
 

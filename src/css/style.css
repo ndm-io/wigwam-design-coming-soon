@@ -1264,6 +1264,41 @@ Navigation
 	color: #666;
 }
 
+/* Overlay navbar */
+
+#nav,
+#nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#nav > li > a {
+	font-family: "Dosis", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 24px;
+	color: #FDFDFD;
+}
+
+#nav li a:hover, #nav li a.active {
+	color: #fff;
+}
+
+#nav li ul {
+	display: none;
+	padding: 5px 0;
+	margin: 5px 0 10px;
+}
+
+#nav li ul li a {
+	display: inline-block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11px;
+	color: #666;
+}
 
 
 /* ------------------------------------------------------------------
