@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/ndm-io/wigwam-design-coming-soon#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babelify": "^7.3.0",
     "body-parser": "^1.15.0",
     "browserify": "^13.0.0",
     "compression": "^1.6.1",
@@ -60,6 +63,8 @@
     "path": "^0.12.7",
     "prompt": "^1.0.0",
     "query-string": "^4.1.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "stringify": "^5.1.0",
     "striptags": "^2.1.1",
     "twilio": "^2.9.1",

@@ -18,7 +18,6 @@ _.each(navs, function (nav) {
         .find('nav')
         .addClass(classes);
 
-
     el.find('.brand-logo')
         .attr('src', el.data('logo'));
 });
