@@ -15,10 +15,6 @@ exports.routes = {
         path:path.join(__dirname, '../public/html/contact.html'),
         route: '/contact'
     },
-    shop: {
-        path:path.join(__dirname, '../public/html/shop.html'),
-        route: '/shop'
-    },
     postContact: {
         route: '/send'
     },
