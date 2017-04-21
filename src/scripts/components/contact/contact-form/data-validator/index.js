@@ -1,5 +1,7 @@
 'use strict';
 
+const strings = require('./strings');
+
 exports.validate = function (data) {
 
     function validateEmail(email) {
@@ -9,9 +11,10 @@ exports.validate = function (data) {
 
     var errors = [];
 
-    if (!data.name || data.name < 3) errors.push('Please include your name');
-    if (!data.message || data.message < 5) errors.push('Please tell us what your contact is about!');
-    if (!data.email || !validateEmail(data.email)) errors.push('We need a valid email address to get back to you');
+    if (!data.name || data.name < 3) errors.push(strings.MISSING_NAME);
+    if (!data.message || data.message.length < 5) errors.push(strings.MISSING_MESSAGE);
+    if (!data.email || !validateEmail(data.email)) errors.push(strings.MISSING_EMAIL);
+    if (data.message && data.message.length > 1000) errors.push(strings.LONG_MESSAGE);
 
     return errors;
 };
