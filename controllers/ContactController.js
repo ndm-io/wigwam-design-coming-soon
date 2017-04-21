@@ -4,7 +4,7 @@ var // secrets = require('../config/secrets').twilio,
 striptags = require('striptags'),
 twilio = require('twilio'),
 MAX_DATA_LEN = 100,
-MAX_MESSAGE_LEN = 200,
+MAX_MESSAGE_LEN = 1000,
 re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 var client = new twilio.RestClient();
