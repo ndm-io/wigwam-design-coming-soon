@@ -1,10 +1,19 @@
 'use strict';
 
-var $ = require('jquery'),
-    _ = require('lodash');
+const striptags = require('striptags');
 
 module.exports = function (element) {
     return function (messages) {
-        element.innerHTML = messages.join('<br>');
+
+        if (!messages) {
+            element.innerHTML = "";
+            return;
+        }
+
+        const strippedMessages = messages.map(function(msg) {
+            return striptags(msg);
+        });
+
+        element.innerHTML = strippedMessages.join('<br>');
     };
 };

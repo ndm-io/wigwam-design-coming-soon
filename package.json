@@ -1,6 +1,6 @@
 {
   "name": "wigwam-design-coming-soon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Wigwam Design Coming Soon Page",
   "main": "app.js",
   "scripts": {
@@ -71,7 +71,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "stringify": "^5.1.0",
-    "striptags": "^2.1.1",
+    "striptags": "^3.0.1",
     "twilio": "^2.9.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

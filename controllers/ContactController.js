@@ -8,7 +8,8 @@ var // secrets = require('../config/secrets').twilio,
     MAX_MESSAGE_LEN = 1000,
     re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-//var client = new twilio.RestClient();
+var client = new twilio.RestClient();
+/*
 const client = {
     messages: {
         create: function (data) {
@@ -17,6 +18,7 @@ const client = {
         }
     }
 };
+*/
 
 var trim = function (str, len) {
     return (str.length > len) ? str.substring(0, len - 3) + "..." : str.substring(0, len);
