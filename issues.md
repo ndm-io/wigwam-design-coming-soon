@@ -2,6 +2,18 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-2 - 22/04/17
+
+### Problem
+
+Minor issue. Wording to about page only includes North Wales/
+
+### Fix
+
+Update to include wording also for the North of England
+
+<hr/>
+
 ## issue-1 - 21/04/17
 
 ### Problem
@@ -21,3 +33,5 @@ the user would have no idea
 
 2. Implement extra server side checking and allow longer
 messages
+
+<hr/>
