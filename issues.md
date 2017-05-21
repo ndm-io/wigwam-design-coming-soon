@@ -2,6 +2,19 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-3 - 21/05/17
+
+### Problem
+
+Minor update of coming soon website with new images for index page
+
+### Fix
+
+Collect suitable new images and add as portfolio items
+to index page
+
+<hr/>
+
 ## issue-2 - 22/04/17
 
 ### Problem
