@@ -1,7 +1,7 @@
 module.exports = {
     twilio: {
         accountSID: process.env.TWILIO_ACCOUNT_SID,
-        authToken: process.env.TWILIO_AUTH_TOKEN,
+        authToken: process.env.TWILIO_AUTH_TOKEN_2,
         numbers: {
             contact: process.env.TWILIO_NUMBER_CONTACT
         },
