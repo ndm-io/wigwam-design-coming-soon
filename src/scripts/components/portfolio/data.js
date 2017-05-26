@@ -43,12 +43,11 @@ const portfolioItems = [
         src: "img/f.jpg"
     },
     {
-        alt: "Mirrored Furniture",
+        alt: "Statement Wall Light",
         size: "",
         filter: "branding",
-        hoverDesc: "Styling / Web / Design",
-        credit: "Firstlight Photography",
-        src: "img/g.jpg"
+        hoverDesc: "Web / Photo",
+        src: "img/unwind-walllight-chrome.jpg"
     },
     {
         alt: "Feather Designer Wallpaper",
