@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-require('dotenv').config()
+require('./config');
 
 var express = require('express');
 var cookieParser = require('cookie-parser');
