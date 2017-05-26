@@ -1,6 +1,6 @@
 'use strict';
 
-var // secrets = require('../config/secrets').twilio,
+var secrets = require('../config/secrets').twilio,
     Promise = require('promise'),
     striptags = require('striptags'),
     twilio = require('twilio'),
@@ -8,7 +8,7 @@ var // secrets = require('../config/secrets').twilio,
     MAX_MESSAGE_LEN = 1000,
     re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-var client = new twilio.RestClient();
+var client = new twilio.RestClient(secrets.accountSID, secrets.authToken);
 /*
 const client = {
     messages: {
