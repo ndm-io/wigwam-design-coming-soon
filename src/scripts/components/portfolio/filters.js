@@ -27,6 +27,7 @@ import $ from 'jquery';
 
     const domElements = titles.map(function (item) {
         return $("<li/>")
+            .addClass("pointer")
             .append($("<a/>")
                 .attr("data-filter", item.filter)
                 .addClass(item.className)
