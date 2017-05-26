@@ -2,6 +2,17 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-4 - 26/05/17
+
+### Problem
+
+Environment vars need to be loaded from .env file which is
+not tracked by git
+
+### Fix
+
+Update to use dotenv package
+
 ## issue-3 - 21/05/17
 
 ### Problem
