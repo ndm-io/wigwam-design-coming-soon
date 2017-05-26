@@ -2,6 +2,8 @@
  * Module dependencies.
  */
 
+require('dotenv').config()
+
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var compress = require('compression');

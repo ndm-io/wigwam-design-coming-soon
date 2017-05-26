@@ -11,6 +11,8 @@ lib-cov
 
 .idea
 
+# Environment variables
+.env
 
 # node-waf configuration
 .lock-wscript
