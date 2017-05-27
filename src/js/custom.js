@@ -198,8 +198,8 @@
 		$(window).on('resize', function() {
 
 			var windowWidth    = Math.max($(window).width(), window.innerWidth),
-				itemWidht      = $('.grid-sizer').width(),
-				itemHeight     = Math.floor(itemWidht * 0.95),
+				itemWidth      = $('.grid-sizer').width(),
+				itemHeight     = Math.floor(itemWidth * 0.95),
 				itemTallHeight = itemHeight * 2;
 
 			if (windowWidth > 500) {
