@@ -2,6 +2,18 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-5 - 05/08/17
+
+### Problem
+
+Start a fork to allow for english language and welsh language
+versions.
+
+### Fix
+
+All displayed strings in views to be rendered from central
+string repository which returns the string in a given language
+
 ## issue-4 - 26/05/17
 
 ### Problem
