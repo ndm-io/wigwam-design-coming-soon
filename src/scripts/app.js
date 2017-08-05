@@ -2,8 +2,8 @@
 'use strict';
 
 require('./components');
-let React = require('react');
-let ReactDOM = require('react-dom');
+//let React = require('react');
+//let ReactDOM = require('react-dom');
 /*
 const rootId = "react-app-root";
 const container = document.getElementById(rootId);

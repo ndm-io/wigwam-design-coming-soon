@@ -8,6 +8,7 @@ var tmpl = require('./navigation.html');
 
 var html = $.parseHTML(tmpl);
 
+var translator = require('../../../translation/exports');
 
 _.each(navs, function (nav) {
 
@@ -20,5 +21,10 @@ _.each(navs, function (nav) {
 
     el.find('.brand-logo')
         .attr('src', el.data('logo'));
+
+    var tags = $(html)
+        .find('a');
+
+    translator.replaceElements(tags, 'nav', translator.lang());
 });
 

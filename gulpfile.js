@@ -12,11 +12,13 @@ var homeTaskScripts = require('./gulp/home/taskScripts'),
     homeTaskImg = require('./gulp/home/taskImg'),
     homeTaskAssets = require('./gulp/home/taskAssets'),
     homeTaskBrowserify = require('./gulp/home/taskBrowserify'),
+    homeTaskTranslation = require('./gulp/home/taskTranslation'),
     homeTaskSitemap = require('./gulp/home/taskSitemap'),
     homeTaskFavicons = require('./gulp/home/taskFavicons');
 
 gulp.task('scripts', homeTaskScripts);
 gulp.task('browserify', homeTaskBrowserify);
+gulp.task('translation', homeTaskTranslation);
 gulp.task('html', homeTaskHtml);
 gulp.task('css', homeTaskCss);
 gulp.task('img', homeTaskImg);
@@ -30,6 +32,7 @@ gulp.task('favicons', homeTaskFavicons);
 
 gulp.task('watch', function () {
     gulp.watch(homePaths.browserify.watch, ['browserify']);
+    gulp.watch(homePaths.translation.watch, ['translation']);
     gulp.watch(homePaths.html.src, ['html']);
     gulp.watch(homePaths.css.src, ['css']);
     gulp.watch(homePaths.img.src, ['img']);
@@ -39,6 +42,7 @@ gulp.task('watch', function () {
 
 var build = [
     'browserify',
+    'translation',
     'scripts',
     'html',
     'css',
