@@ -25,6 +25,6 @@ _.each(navs, function (nav) {
     var tags = $(html)
         .find('a');
 
-    translator.replaceElements(tags, 'nav', translator.lang());
+    translator.replaceElements(tags, 'nav', translator.lang(localStorage));
 });
 

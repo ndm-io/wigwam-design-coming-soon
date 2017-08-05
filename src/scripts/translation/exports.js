@@ -2,6 +2,23 @@ const data = require('./data');
 const TRANSLATION_ERROR_DESC = "==== Translation Error ====";
 const $ = require('jquery');
 
+const ENGLISH = "english";
+const CYMRAEG = "cymraeg";
+const STORAGE_KEY = "design.wigwam.language";
+
+const lang = function (storage) {
+    if (!storage) { return ENGLISH }
+    const candidate = storage.getItem(STORAGE_KEY) || ENGLISH;
+    if (candidate == ENGLISH || candidate == CYMRAEG) {
+        return candidate;
+    }
+    return ENGLISH;
+};
+
+const setLang = function (language) {
+    localStorage.setItem(STORAGE_KEY, language);
+};
+
 const getData = function (key, dictionary) {
     return new Promise(function (resolve, reject) {
 
@@ -27,9 +44,9 @@ const _replace = function (page, lang, key) {
 };
 
 const replace = function (page, key) {
-    const lang = "cymraeg";
+    const language = lang(localStorage);
 
-    _replace(page, lang, key)
+    _replace(page, language, key)
         .then(function (translatedText) {
             document.write(translatedText);
         })
@@ -57,12 +74,13 @@ const replaceElements = function (elements, page, lang) {
     });
 };
 
-const lang = function () {
-    return "cymraeg";
-};
-
 module.exports = {
+    languages: {
+        english: ENGLISH,
+        cymraeg: CYMRAEG
+    },
     lang: lang,
+    setLang: setLang,
     _replace: _replace,
     replace: replace,
     replaceElements: replaceElements,
