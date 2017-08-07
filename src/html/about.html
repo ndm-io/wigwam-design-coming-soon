@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wigwam provides a personalised, relaxed interior design service. Sam designs each project personally">
+    <meta name="description"
+          content="Wigwam provides a personalised, relaxed interior design service. Sam designs each project personally">
 
     <title>Wigwam Design | About Us</title>
 
@@ -35,10 +36,10 @@
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
             a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
+                m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
@@ -83,14 +84,16 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <!-- <h1 class="mh-line-size-3 font-alt m-b-20">About us</h1> -->
-                    <h1 class="mh-line-size-3 font-alt m-b-20">
+                    <h1 class="mh-line-size-3 font-alt m-b-20" id="about-title">
+                        About Us
                         <script>
-                            replace("about", "title");
+                            replace("about-title", "about", "title");
                         </script>
                     </h1>
-                    <h5 class="mh-line-size-4 font-alt">
+                    <h5 class="mh-line-size-4 font-alt" id="about-subtitle">
+                        We don't have a style. We have Standards
                         <script>
-                            replace("about", "subtitle");
+                            replace("about-subtitle", "about", "subtitle");
                         </script>
                     </h5>
                 </div>
@@ -112,12 +115,19 @@
                 <!-- ABOUT STUDIO  -->
                 <div class="col-sm-4">
 
-                    <h4 class="font-alt m-t-0 m-b-20">About the Studio</h4>
-                    <p>
-                        Wigwam is a North Wales based interior design studio specialising in
-                        residential projects for private individuals. The studio helps clients
-                        across the North of England and Wales realise the full potential of their
-                        home.
+                    <h4 class="font-alt m-t-0 m-b-20" id="about-about-the-studio-title">
+                        About the studio
+                        <script>
+                            replace("about-about-the-studio-title", "about", "aboutTheStudioTitle");
+                        </script>
+                    </h4>
+                    <p id="about-about-the-studio-body">
+                        Wigwam is a North Wales based interior design studio specialising in residential projects
+                        for private individuals. The studio helps clients across the North of England and Wales
+                        realise the full potential of their home.
+                        <script>
+                            replace("about-about-the-studio-body", "about", "aboutTheStudioBody");
+                        </script>
                     </p>
 
                 </div>
@@ -126,12 +136,20 @@
                 <!-- WHAT WE DO -->
                 <div class="col-sm-4">
 
-                    <h4 class="font-alt m-t-0 m-b-20">What We Do</h4>
-                    <p>
+                    <h4 class="font-alt m-t-0 m-b-20" id="about-what-we-do-title">
+                        What We Do
+                        <script>
+                            replace("about-what-we-do-title", "about", "whatWeDoTitle");
+                        </script>
+                    </h4>
+                    <p id="about-what-we-do-body">
                         Wigwam provides a personalised, relaxed design service from their studio in Llangollen.
                         Sam designs each project personally, whilst also concentrating on what she does best and giving
                         the client the peace of mind that the project will be carried
                         out seamlessly.
+                        <script>
+                            replace("about-what-we-do-body", "about", "whatWeDoBody");
+                        </script>
                     </p>
 
                 </div>
@@ -140,7 +158,12 @@
                 <!-- SKILLS -->
                 <div class="col-sm-4">
 
-                    <h6 class="progress-title font-alt">Design</h6>
+                    <h6 class="progress-title font-alt" id="about-design">
+                        Design
+                        <script>
+                            replace("about-design", "singleWords", "design", {capitalizeFirst: true});
+                        </script>
+                    </h6>
                     <div class="progress">
                         <div class="progress-bar pb-dark" aria-valuenow="90" role="progressbar" aria-valuemin="0"
                              aria-valuemax="100">
@@ -148,7 +171,12 @@
                         </div>
                     </div>
 
-                    <h6 class="progress-title font-alt">Styling</h6>
+                    <h6 class="progress-title font-alt" id="about-styling">
+                        Styling
+                        <script>
+                            replace("about-styling", "singleWords", "styling", {capitalizeFirst: true});
+                        </script>
+                    </h6>
                     <div class="progress">
                         <div class="progress-bar pb-dark" aria-valuenow="80" role="progressbar" aria-valuemin="0"
                              aria-valuemax="100">
@@ -156,7 +184,12 @@
                         </div>
                     </div>
 
-                    <h6 class="progress-title font-alt">Digital</h6>
+                    <h6 class="progress-title font-alt" id="about-digital">
+                        Digital
+                        <script>
+                            replace("about-digital", "singleWords", "digital", {capitalizeFirst: true});
+                        </script>
+                    </h6>
                     <div class="progress">
                         <div class="progress-bar pb-dark" aria-valuenow="50" role="progressbar" aria-valuemin="0"
                              aria-valuemax="100">
@@ -193,7 +226,13 @@
                 <div class="col-sm-3 m-b-md-20">
                     <div class="counter-item">
                         <div class="counter-title font-alt">
-                            <h5 class="font-alt counter-number" data-number="910"><span></span></h5> Cups of tea
+                            <h5 class="font-alt counter-number" data-number="910"><span></span></h5>
+                            <span id="about-cups-of-tea">Cups of tea</span>
+                            <script>
+                                replace("about-cups-of-tea",
+                                    "about",
+                                    "cupsOfTea", {titleCase: true});
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -203,7 +242,13 @@
                 <div class="col-sm-3 m-b-md-20">
                     <div class="counter-item">
                         <div class="counter-title font-alt">
-                            <h5 class="font-alt counter-number" data-number="54"><span></span></h5> Elle Decor Magazines
+                            <h5 class="font-alt counter-number" data-number="54"><span></span></h5>
+                            <span id="about-elle-decor-magazines">Elle Decor Magazines</span>
+                            <script>
+                                replace("about-elle-decor-magazines",
+                                    "about",
+                                    "elleDecorMagazines", {titleCase: true});
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -213,7 +258,13 @@
                 <div class="col-sm-3 m-b-md-20">
                     <div class="counter-item">
                         <div class="counter-title font-alt">
-                            <h5 class="font-alt counter-number" data-number="543"><span></span>k</h5> Photos taken
+                            <h5 class="font-alt counter-number" data-number="543"><span></span>k</h5>
+                            <span id="about-photos-taken">Photos taken</span>
+                            <script>
+                                replace("about-photos-taken",
+                                    "about",
+                                    "photosTaken", {titleCase: true});
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -223,7 +274,13 @@
                 <div class="col-sm-3 m-b-md-20">
                     <div class="counter-item">
                         <div class="counter-title font-alt">
-                            <h5 class="counter-number" data-number="98"><span></span>%</h5> Happy clients
+                            <h5 class="counter-number" data-number="98"><span></span>%</h5>
+                            <span id="about-happy-clients">Happy clients</span>
+                            <script>
+                                replace("about-happy-clients",
+                                    "about",
+                                    "happyClients", {titleCase: true});
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -244,7 +301,12 @@
             <!-- MODULE TITLE -->
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">Services</h2>
+                    <h2 class="module-title font-alt" id="about-detail-services">Services</h2>
+                    <script>
+                        replace("about-detail-services",
+                            "singleWords",
+                            "services", {capitalizeFirst: true});
+                    </script>
                 </div>
             </div>
             <!-- /MODULE TITLE -->
@@ -423,8 +485,10 @@
                                 Pleasure to deal with, Sam at Wigwam design is the ultimate professional,
                                 love her attention to detail and you can always rely on Sam to think outside the box
                                 when needed. Sam will put you at ease from the moment you meet with her, and has a great
-                                knowledge and understanding of interior design wether it's a period look your after or a more
-                                modern contempery design. Looking forward to working with Sam @wigwam design on all my future
+                                knowledge and understanding of interior design wether it's a period look your after or a
+                                more
+                                modern contempery design. Looking forward to working with Sam @wigwam design on all my
+                                future
                                 projects. #WigWam Design
                             </div>
                             <div class="quote-author font-alt">Ian, Client.</div>
@@ -449,7 +513,6 @@
                             <div class="quote-author font-alt">Josh, Client.</div>
                         </div>
                         <!-- SLIDE 5 -->
-
 
 
                     </div>

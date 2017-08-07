@@ -31,18 +31,68 @@ describe('translator', function () {
         });
     });
 
-    describe('_replace', function () {
-        it('_replace - correctly translates home', function () {
+    describe('translate', function () {
 
-            return translator._replace('nav', 'cymraeg', 'home')
+        it('correctly translates home', function () {
+
+            return translator.translate('nav', 'cymraeg', 'home')
                 .then(function (translatedText) {
-                    expect(translatedText).to.equal("Hafan");
+                    expect(translatedText).to.equal("hafan");
                 })
                 .catch(function (error) {
                     expect(error).to.equal(undefined);
                 });
 
         });
+
+        it('correctly handles single words', function () {
+
+           return translator.translate('singleWords', 'cymraeg', 'design')
+               .then(function (translatedText) {
+                   expect(translatedText).to.equal("dylunio");
+               })
+               .catch(function (error) {
+                   expect(error).to.equal(undefined);
+               });
+
+        });
+    });
+
+
+    describe('formatting', function () {
+
+        it('Capitalizes first with single word', function () {
+            const value = "home";
+            const result = translator.format(value, {capitalizeFirst: true});
+
+            expect(result).to.equal("Home");
+        });
+
+        it('Capitalizes first with sentence', function () {
+            const value = "home is were I live";
+            const result = translator.format(value, {capitalizeFirst: true});
+
+            expect(result).to.equal("Home is were I live");
+        });
+
+        it('titleCases', function () {
+
+            const value = "i like coffee";
+            const result = translator.format(value, {titleCase: true});
+
+            expect(result).to.equal("I Like Coffee");
+
+        });
+
+        it('upperCases', function () {
+
+            const value = "a lowercased sentence";
+            const result = translator.format(value, {upperCase: true});
+
+            expect(result).to.equal("A LOWERCASED SENTENCE");
+        });
+
+
     });
 
     describe('lang()', function () {

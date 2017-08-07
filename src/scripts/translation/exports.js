@@ -1,6 +1,10 @@
 const data = require('./data');
 const TRANSLATION_ERROR_DESC = "==== Translation Error ====";
+const TRANSLATION_ERROR_END = "===========================";
 const $ = require('jquery');
+
+const capitalizeFirst = require('../utils/capitalizeFirstLetter');
+const titleCase = require('../utils/titleCase');
 
 const ENGLISH = "english";
 const CYMRAEG = "cymraeg";
@@ -28,12 +32,16 @@ const getData = function (key, dictionary) {
         if (result) {
             resolve(result);
         } else {
+            console.log("** Error Malformed Request **");
+            console.log("Dictionary: ", dictionary);
+            console.log("Key: ", key);
+            console.log("******************************");
             reject(new Error("Malformed Request"));
         }
     });
 };
 
-const _replace = function (page, lang, key) {
+const translate = function (page, lang, key) {
     return getData(page, data)
         .then(function (translations) {
             return getData(lang, translations);
@@ -43,15 +51,49 @@ const _replace = function (page, lang, key) {
         });
 };
 
-const replace = function (page, key) {
+const toId = function (label) {
+    if (label[0] != "#") {
+        return "#" + label;
+    }
+    return label;
+};
+
+const format = function (text, opts) {
+    let formattedText = text;
+    if (opts.capitalizeFirst) {
+        formattedText = capitalizeFirst(formattedText);
+    }
+    if (opts.titleCase) {
+        formattedText = titleCase(formattedText);
+    }
+    if (opts.upperCase) {
+        formattedText = formattedText.toUpperCase();
+    }
+    return formattedText;
+};
+
+const setText = function (label, text) {
+    $(toId(label)).text(text);
+};
+
+const log = function (error, label, page, key) {
+    console.log(TRANSLATION_ERROR_DESC);
+    console.log("Error: ", error);
+    console.log("Label: " + label + " | Page: " + page + " | Key: " + key);
+    console.log(TRANSLATION_ERROR_END);
+};
+
+const replace = function (label, page, key, opts = {}) {
     const language = lang(localStorage);
 
-    _replace(page, language, key)
+    translate(page, language, key)
         .then(function (translatedText) {
-            document.write(translatedText);
+
+            const formattedTranslation = format(translatedText, opts);
+            setText(label, formattedTranslation);
         })
         .catch(function (error) {
-            console.log(TRANSLATION_ERROR_DESC, error);
+            log(error, label, page, key);
         });
 
 
@@ -63,12 +105,12 @@ const replaceElements = function (elements, page, lang) {
         const selector = $(el);
         const key = selector.data('options');
         if (key) {
-            _replace(page, lang, key)
+            translate(page, lang, key)
                 .then(function (translatedText) {
-                    selector.text(translatedText)
+                    selector.text(translatedText);
                 })
                 .catch(function (error) {
-                    console.log(TRANSLATION_ERROR_DESC, error);
+                    log(error, selector.id, page, key)
                 });
         }
     });
@@ -79,9 +121,10 @@ module.exports = {
         english: ENGLISH,
         cymraeg: CYMRAEG
     },
+    format: format,
     lang: lang,
     setLang: setLang,
-    _replace: _replace,
+    translate: translate,
     replace: replace,
     replaceElements: replaceElements,
     getData: getData
