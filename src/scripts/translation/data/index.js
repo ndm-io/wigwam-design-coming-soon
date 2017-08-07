@@ -23,16 +23,26 @@ const data = {
             detail: "manylion"
         }
     },
+    home: {
+        english: {
+            subtitle: "an interiors company"
+        },
+        cymraeg: {
+            subtitle: "cwmni dylunio mewnol"
+        }
+    },
     nav: {
         english: {
             home: "home",
             about: "about",
-            contact: "contact"
+            contact: "contact",
+            allRightsReserved: "all rights reserved"
         },
         cymraeg: {
             home: "hafan",
             about: "amdanom Ni",
-            contact: "cysylltu"
+            contact: "cysylltu",
+            allRightsReserved: "cedwir pob hawl"
         }
     },
     about: {
@@ -50,7 +60,22 @@ const data = {
             cupsOfTea: "cups of tea",
             elleDecorMagazines: "elle decor magazines",
             photosTaken: "photos taken",
-            happyClients: "happy clients"
+            happyClients: "happy clients",
+            bespokeBody: "If your focus is on an individual room, we’ll work with you to create a truly outstanding " +
+            "space that complements your taste and lifestyle. From a high spec kitchen to a sophisticated lounge or " +
+            "bedroom space, we will consider every aspect of your design and installation in meticulous detail.",
+            designBody: "Sam will work with you to unlock your property’s potential while improving the flow and " +
+            "functionality of the space, ensuring every detail works in harmony with the next.",
+            decorationBody: "If you’re simply planning to update an existing room or entirely refurbish a newly " +
+            "acquired property, you can commission our creative team to select the perfect finishes and specify a " +
+            "colour palette to complement your taste and transform your home.",
+            styleBody: "Whether you desire the understated elegance of a classic contemporary interior or the warmth " +
+            "of a traditional design, our talented designers have the vision to both meet and exceed your aspirations.",
+            enhancingBody: "Our focus is always on enhancing the inherent character and period of your property, " +
+            "combined with creating a space that is a true expression of your personality.",
+            detailBody: "We continue to add detail and thought to each and every individual aspect of the project " +
+            "right up until installation, liaising with our suppliers and contractors to achieve a design of " +
+            "impeccable quality."
         },
         cymraeg: {
             title: "Amdanom ni",
@@ -66,7 +91,21 @@ const data = {
             cupsOfTea: "cwpanaid o de",
             elleDecorMagazines: "cylchgronau elle decor",
             photosTaken: "lluniau a dynnwyd",
-            happyClients: "cleientiaid yn hapus"
+            happyClients: "cleientiaid yn hapus",
+            bespokeBody: "Os yw eich ffocws ar ystafell unigol, byddwn yn gweithio gyda chi i greu gofod gwirioneddol " +
+            "eithriadol sy'n ategu eich chwaeth a ffordd o fyw. O gegin fanyleb uchel i lolfa soffistigedig neu " +
+            "ofod ystafell wely, byddwn yn ystyried pob agwedd ar eich dylunio a gosod yn fanwl fanwl.",
+            designBody: "Bydd Sam yn gweithio gyda chi i ddatgloi potensial eich eiddo wrth wella llif ac " +
+            "ymarferoldeb y gofod, gan sicrhau bob manylyn yn gweithio mewn cytgord â'r nesaf.",
+            decorationBody: "Os ydych ond yn bwriadu diweddaru'r ystafell bresennol neu yn llwyr adnewyddu eiddo " +
+            "newydd ei brynu, gallwch gomisiynu ein tîm creadigol i ddewis y gorffeniadau perffaith a nodi palet " +
+            "lliw i gyd-fynd eich chwaeth a thrawsnewid eich cartref.",
+            styleBody: "P'un a ydych yn ei ddymuno ceinder cynnil o du cyfoes clasurol neu gynhesrwydd o ddyluniad " +
+            "traddodiadol, mae ein dylunwyr talentog yn cael y weledigaeth i gwrdd â rhagori ar eich dyheadau.",
+            enhancingBody: "Mae ein ffocws bob amser ar wella cymeriad cynhenid a chyfnod eich eiddo, ynghyd â " +
+            "chreu man sydd yn fynegiant cywir o'ch personoliaeth.",
+            detailBody: "Rydym yn parhau i ychwanegu manylion ac yn meddwl i bob agwedd unigol o'r prosiect hyd nes " +
+            "y gosod, cysylltu â'n cyflenwyr a chontractwyr i sicrhau dyluniad o ansawdd uchaf."
         }
     }
 };

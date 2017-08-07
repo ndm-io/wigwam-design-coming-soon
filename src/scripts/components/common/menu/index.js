@@ -37,4 +37,6 @@ _.each(menus, function (menu) {
     englishSelector.click(clickHandler(translator.languages.english));
     cymraegSelector.click(clickHandler(translator.languages.cymraeg));
 
+    translator.replace("menu-footer-allrightsreserved", "nav", "allRightsReserved");
+
 });

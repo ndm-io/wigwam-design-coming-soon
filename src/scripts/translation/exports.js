@@ -51,8 +51,16 @@ const translate = function (page, lang, key) {
         });
 };
 
+const translateSingleWord = function (key, language) {
+    const languageResults = data.singleWords[language];
+    if (!languageResults) { return key; }
+    const result = languageResults[key];
+    if (!result) { return key; }
+    return result;
+};
+
 const toId = function (label) {
-    if (label[0] != "#") {
+    if (label[0] !== "#") {
         return "#" + label;
     }
     return label;
@@ -73,6 +81,12 @@ const format = function (text, opts) {
 };
 
 const setText = function (label, text) {
+    const element = $(toId(label));
+    if (element.length === 0) {
+        console.log("===== Replacing Error ====");
+        console.log("Not found: ", label);
+        console.log("==========================")
+    }
     $(toId(label)).text(text);
 };
 
@@ -125,6 +139,7 @@ module.exports = {
     lang: lang,
     setLang: setLang,
     translate: translate,
+    translateSingleWord: translateSingleWord,
     replace: replace,
     replaceElements: replaceElements,
     getData: getData

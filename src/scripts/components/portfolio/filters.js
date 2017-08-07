@@ -1,5 +1,5 @@
 import data from './data';
-import capitalize from './capitalizeFirst';
+import capitalize from '../../utils/capitalizeFirstLetter';
 import $ from 'jquery';
 
 (function () {

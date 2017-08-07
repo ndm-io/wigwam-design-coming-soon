@@ -1,19 +1,7 @@
-/*
- <div class="work-item tall branding">
- <a>
- <img src="img/elegant-floor-lamp.jpg" alt="Elegant Floor Lamp">
- <div class="work-caption font-alt">
- <h3 class="work-title">Elegant</h3>
- <div class="work-descr">
- Web / Photo
- </div>
- </div>
- </a>
- </div>
- */
+'use strict';
 
 import data from './data';
-import capitialize from './capitalizeFirst';
+import capitialize from '../../utils/capitalizeFirstLetter';
 import $ from 'jquery';
 
 
