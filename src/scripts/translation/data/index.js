@@ -3,19 +3,30 @@ const data = {
         english: {
             design: "design",
             styling: "styling",
-            services: "services"
+            style: "style",
+            digital: "digital",
+            services: "services",
+            bespoke: "bespoke",
+            decoration: "decoration",
+            enhancing: "enhancing",
+            detail: "detail"
         },
         cymraeg: {
             design: "dylunio",
             styling: "steilio",
+            style: "steil",
             digital: "ddigidol",
-            services: "gwasanaethau"
+            services: "gwasanaethau",
+            bespoke: "pwrpasol",
+            decoration: "addurno",
+            enhancing: "gwella",
+            detail: "manylion"
         }
     },
     nav: {
         english: {
             home: "home",
-            about: "hbout",
+            about: "about",
             contact: "contact"
         },
         cymraeg: {
