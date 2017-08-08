@@ -1,6 +1,7 @@
-import data from './data';
+import dataProvider from './data';
 import capitalize from '../../utils/capitalizeFirstLetter';
 import $ from 'jquery';
+import translator from '../../translation/exports';
 
 (function () {
 
@@ -17,6 +18,7 @@ import $ from 'jquery';
         return "." + key;
     };
 
+    const data = dataProvider(translator.lang(localStorage));
     const filters = data.reduce(filterCounter, {});
 
     const userTitles = Object.keys(filters).map(function (key) {

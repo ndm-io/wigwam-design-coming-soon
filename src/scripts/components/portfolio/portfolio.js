@@ -1,6 +1,7 @@
 'use strict';
 
-import data from './data';
+import dataProvider from './data';
+import translator from '../../translation/exports';
 import capitialize from '../../utils/capitalizeFirstLetter';
 import $ from 'jquery';
 
@@ -10,6 +11,8 @@ import $ from 'jquery';
     const classFor = function (item) {
         return "work-item" + " " + item.size + " " + item.filter;
     };
+
+    const data = dataProvider(translator.lang(localStorage));
 
     const domElements = data.map(function (item) {
         return $("<div/>")

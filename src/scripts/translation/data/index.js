@@ -13,7 +13,9 @@ const data = {
             submit: "submit",
             name: "name",
             email: "email",
-            message: "message"
+            message: "message",
+            branding: "branding",
+            all: "all"
         },
         cymraeg: {
             design: "dylunio",
@@ -28,7 +30,9 @@ const data = {
             submit: "cyflwyno",
             name: "enw",
             email: "ebost",
-            message: "neges"
+            message: "neges",
+            branding: "brandio",
+            all: "I gyd"
         }
     },
     home: {
