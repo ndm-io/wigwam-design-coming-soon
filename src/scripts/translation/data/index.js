@@ -104,9 +104,10 @@ const data = {
             elleDecorMagazines: "cylchgronau elle decor",
             photosTaken: "lluniau a dynnwyd",
             happyClients: "cleientiaid yn hapus",
-            bespokeBody: "Os yw eich ffocws ar ystafell unigol, byddwn yn gweithio gyda chi i greu gofod gwirioneddol " +
-            "eithriadol sy'n ategu eich chwaeth a ffordd o fyw. O gegin fanyleb uchel i lolfa soffistigedig neu " +
-            "ofod ystafell wely, byddwn yn ystyried pob agwedd ar eich dylunio a gosod yn fanwl fanwl.",
+            bespokeBody: "Os yw eich ffocws ar ystafell unigol, byddwn yn gweithio gyda chi i greu gofod " +
+            "gwirioneddol eithriadol sy'n ategu eich chwaeth a ffordd o fyw. O gegin fanyleb uchel i lolfa " +
+            "soffistigedig neu ofod ystafell wely, byddwn yn ystyried pob agwedd ar eich dylunio a gosod yn " +
+            "fanwl fanwl.",
             designBody: "Bydd Sam yn gweithio gyda chi i ddatgloi potensial eich eiddo wrth wella llif ac " +
             "ymarferoldeb y gofod, gan sicrhau bob manylyn yn gweithio mewn cytgord â'r nesaf.",
             decorationBody: "Os ydych ond yn bwriadu diweddaru'r ystafell bresennol neu yn llwyr adnewyddu eiddo " +
