@@ -9,7 +9,11 @@ const data = {
             bespoke: "bespoke",
             decoration: "decoration",
             enhancing: "enhancing",
-            detail: "detail"
+            detail: "detail",
+            submit: "submit",
+            name: "name",
+            email: "email",
+            message: "message"
         },
         cymraeg: {
             design: "dylunio",
@@ -20,7 +24,11 @@ const data = {
             bespoke: "pwrpasol",
             decoration: "addurno",
             enhancing: "gwella",
-            detail: "manylion"
+            detail: "manylion",
+            submit: "cyflwyno",
+            name: "enw",
+            email: "ebost",
+            message: "neges"
         }
     },
     home: {
@@ -106,6 +114,22 @@ const data = {
             "chreu man sydd yn fynegiant cywir o'ch personoliaeth.",
             detailBody: "Rydym yn parhau i ychwanegu manylion ac yn meddwl i bob agwedd unigol o'r prosiect hyd nes " +
             "y gosod, cysylltu â'n cyflenwyr a chontractwyr i sicrhau dyluniad o ansawdd uchaf."
+        }
+    },
+    contact: {
+        english: {
+            title: "Contact us",
+            subtitle: "We love talking about design.",
+            getInTouch: "Get in touch",
+            leaveUsANote: "Leave us a quick note and we will get back in touch, or just use your favourite social " +
+            "media account."
+        },
+        cymraeg: {
+            title: "Cysylltu â ni",
+            subtitle: "rydym wrth fy modd yn siarad am ddylunio.",
+            getInTouch: "yn gadael i siarad",
+            leaveUsANote: "Gadewch nodyn sydyn a byddwn yn cysylltu â chi, neu dim ond yn defnyddio eich hoff " +
+            "gyfrif cyfryngau cymdeithasol."
         }
     }
 };

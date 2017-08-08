@@ -79,8 +79,22 @@
 
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h1 class="mh-line-size-3 font-alt m-b-20">Contact Us</h1>
-                    <h5 class="mh-line-size-4 font-alt">We love talking about design.</h5>
+                    <h1 class="mh-line-size-3 font-alt m-b-20" id="contact-hero-title">
+                        Contact Us
+                        <script>
+                            replace("contact-hero-title",
+                                "contact",
+                                "title", {upperCased: true});
+                        </script>
+                    </h1>
+                    <h5 class="mh-line-size-4 font-alt" id="contact-hero-subtitle">
+                        We love talking about design.
+                        <script>
+                            replace("contact-hero-subtitle",
+                                "contact",
+                                "subtitle", {upperCased: true});
+                        </script>
+                    </h5>
                 </div>
             </div>
 
@@ -98,9 +112,22 @@
 
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">Get In Touch</h2>
-                    <div class="module-subtitle font-serif">
-                        Leave us a quick note and we will get back in touch, or just use your favourite social media account. 
+                    <h2 class="module-title font-alt" id="contact-getintouch-title">
+                        Get In Touch
+                        <script>
+                            replace("contact-getintouch-title",
+                                "contact",
+                                "getInTouch", {upperCased: true});
+                        </script>
+                    </h2>
+                    <div class="module-subtitle font-serif" id="contact-getintouch-body">
+                        Leave us a quick note and we will get back in touch, or just use your
+                        favourite social media account.
+                        <script>
+                            replace("contact-getintouch-body",
+                                "contact",
+                                "leaveUsANote", {capitalizeFirst: true});
+                        </script>
                     </div>
                 </div>
             </div>

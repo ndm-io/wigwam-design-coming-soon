@@ -1,30 +1,53 @@
 'use strict';
 
-var $ = require('jquery'),
+const $ = require('jquery'),
     _ = require('lodash'),
     routes = require('../../../../../routes').routes,
     dataValidator = require('./data-validator'),
     display = require('./response-display'),
     formData = require('./form-data');
 
+const translator = require('../../../translation/exports');
+
+const ID_BUTTON_SUBMIT = "#contact-form-button-submit";
+
+const translatableData = [
+    {
+        id: "#contact-form-input-email",
+        key: "email"
+    },
+    {
+        id: "#contact-form-input-name",
+        key: "name"
+    },
+    {
+        id: "#contact-form-textarea-message",
+        key: "message"
+    }
+];
+
+const formattedWord = function (key, language) {
+    return translator.translateSingleWord(key, language) + "*";
+};
+
 (function () {
 
-    var forms = $('.contact-form'),
+    const forms = $('.contact-form'),
         tmpl = require('./contact-form.html');
 
-    var html = $.parseHTML(tmpl);
+    const html = $.parseHTML(tmpl);
 
-    var submit = function (e) {
+    const submit = function (e) {
 
         e.preventDefault();
-        var data = formData(e);
-        var errors = dataValidator.validate(data);
-        var response = $('.ajax-response')[0];
+        const data = formData(e);
+        const errors = dataValidator.validate(data);
+        const response = $('.ajax-response')[0];
         response.innerHTML = '';
 
-        var responseDisplay = display(response);
+        const responseDisplay = display(response);
 
-        if (errors.length == 0) {
+        if (errors.length === 0) {
             $.post(routes.postContact.route, data, function (response) {
                 responseDisplay(response.messages);
             }, 'json');
@@ -46,5 +69,11 @@ var $ = require('jquery'),
 
     });
 
+    const language = translator.lang(localStorage);
+    $(ID_BUTTON_SUBMIT).text(translator.translateSingleWord("submit", language));
+
+    _.each(translatableData, function (item) {
+        $(item.id).attr('placeholder', formattedWord(item.key, language));
+    });
 
 })();
