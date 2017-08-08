@@ -6,7 +6,7 @@ const translator = require('../../../../translation/exports');
 module.exports = function (element) {
     return function (messages, language = translator.languages.english) {
 
-        if (!messages) {
+        if (!messages || typeof messages !== "object") {
             element.innerHTML = "";
             return;
         }

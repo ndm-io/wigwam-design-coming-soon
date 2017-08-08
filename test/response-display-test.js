@@ -60,6 +60,30 @@ describe('response-display', function () {
 
     });
 
+    it("handles an empty array", function() {
+
+        const mockElement = mockElementFactory();
+        const responseDisplay = responseFactory(mockElement);
+
+        responseDisplay([]);
+        const expectedResponse = "";
+
+        expect(mockElement.innerHTML).to.equal(expectedResponse);
+
+    });
+
+    it("handles being passed a string instead of an array", function() {
+
+        const mockElement = mockElementFactory();
+        const responseDisplay = responseFactory(mockElement);
+
+        responseDisplay("This is a malformed message");
+        const expectedResponse = "";
+
+        expect(mockElement.innerHTML).to.equal(expectedResponse);
+
+    });
+
     it("translates server message - thank you - into cymraeg", function () {
 
         const mockElement = mockElementFactory();
@@ -132,6 +156,36 @@ describe('response-display', function () {
         responseDisplay([serverResponse], language);
 
         const expectedResponse = translator.responseMessages.thankYouMessage(language);
+
+        expect(mockElement.innerHTML).to.equal(expectedResponse);
+
+    });
+
+    it("handles and unknown server message in english", function () {
+
+        const mockElement = mockElementFactory();
+        const responseDisplay = responseFactory(mockElement);
+
+        const serverMessage = "This is an unknown message";
+
+        responseDisplay([serverMessage], translator.languages.english);
+
+        const expectedResponse = "This is an unknown message";
+
+        expect(mockElement.innerHTML).to.equal(expectedResponse);
+
+    });
+
+    it("handles and unknown server message in cymraeg", function () {
+
+        const mockElement = mockElementFactory();
+        const responseDisplay = responseFactory(mockElement);
+
+        const serverMessage = "This is an unknown message";
+
+        responseDisplay([serverMessage], translator.languages.cymraeg);
+
+        const expectedResponse = "This is an unknown message";
 
         expect(mockElement.innerHTML).to.equal(expectedResponse);
 
