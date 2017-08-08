@@ -131,6 +131,30 @@ const data = {
             leaveUsANote: "Gadewch nodyn sydyn a byddwn yn cysylltu â chi, neu dim ond yn defnyddio eich hoff " +
             "gyfrif cyfryngau cymdeithasol."
         }
+    },
+    errorMessages: {
+        keys: {
+            missingEmail: "missingEmail",
+            missingName: "missingName",
+            missingMessage: "missingMessage",
+            messageTooLong: "messageTooLong"
+        },
+        missingEmail: {
+            english: "We need a valid email address to get back to you",
+            cymraeg: "Mae angen cyfeiriad e-bost dilys arnom i ddychwelyd atoch chi"
+        },
+        missingName: {
+            english: "Please include your name",
+            cymraeg: "Cofiwch gynnwys eich enw"
+        },
+        missingMessage: {
+            english: "Please tell us what your contact is about!",
+            cymraeg: "Dywedwch wrthym beth yw eich cyswllt chi!"
+        },
+        messageTooLong: {
+            english: "Sorry, your message is a bit too long. Please cut to the chase!",
+            cymraeg: "Mae'n ddrwg gennym, mae eich neges yn ychydig yn rhy hir. Torrwch at yr olrhain!"
+        }
     }
 };
 

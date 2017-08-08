@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 
-const dataValidator = require('../src/scripts/components/contact/contact-form/data-validator');
-const strings = require('../src/scripts/components/contact/contact-form/data-validator/strings');
+const dataValidator = require('../src/scripts/components/contact/contact-form/data-validator')();
+const translator = require('../src/scripts/translation/exports');
 
 const validShortMessage = "This is a valid but short message for tests of contact controller";
 const validName = "Dorothy";
@@ -48,7 +48,7 @@ const emptyMessage = {
 const messageTooLong = {
     name: validName,
     email: validEmail,
-    message: invalidMessage
+    message: invalidMessage + invalidMessage + invalidMessage
 };
 
 const invalidEmail1 = {
@@ -63,53 +63,56 @@ const invalidEmail2 = {
     message: validShortMessage
 };
 
+const language = translator.lang();
+const strings = translator.errorMessages.contact;
+
 describe('data-validator', function () {
 
     describe('deals with single errors', function () {
 
         it('rejects with correct description on missing name', function () {
             const result = dataValidator.validate(missingName);
-            expect(result[0]).to.equal(strings.MISSING_NAME);
+            expect(result[0]).to.equal(strings.missingName(language));
         });
 
         it('rejects with correct description on missing email', function () {
             const result = dataValidator.validate(missingEmail);
-            expect(result[0]).to.equal(strings.MISSING_EMAIL);
+            expect(result[0]).to.equal(strings.missingEmail(language));
         });
 
         it('rejects with correct description on missing message', function () {
             const result = dataValidator.validate(missingMessage);
-            expect(result[0]).to.equal(strings.MISSING_MESSAGE);
+            expect(result[0]).to.equal(strings.missingMessage(language));
         });
 
         it('rejects with correct description on empty name', function () {
             const result = dataValidator.validate(emptyName);
-            expect(result[0]).to.equal(strings.MISSING_NAME);
+            expect(result[0]).to.equal(strings.missingName(language));
         });
 
         it('rejects with correct description on empty email', function () {
             const result = dataValidator.validate(emptyEmail);
-            expect(result[0]).to.equal(strings.MISSING_EMAIL);
+            expect(result[0]).to.equal(strings.missingEmail(language));
         });
 
         it('rejects with correct description on empty message', function () {
             const result = dataValidator.validate(emptyMessage);
-            expect(result[0]).to.equal(strings.MISSING_MESSAGE);
+            expect(result[0]).to.equal(strings.missingMessage(language));
         });
 
         it('rejects with correct description on too long message', function () {
             const result = dataValidator.validate(messageTooLong);
-            expect(result[0]).to.equal(strings.LONG_MESSAGE);
+            expect(result[0]).to.equal(strings.messageTooLong(language));
         });
 
         it('rejects with correct description on invalid email 1', function () {
             const result = dataValidator.validate(invalidEmail1);
-            expect(result[0]).to.equal(strings.MISSING_EMAIL);
+            expect(result[0]).to.equal(strings.missingEmail(language));
         });
 
         it('rejects with correct description on invalid email 2', function () {
             const result = dataValidator.validate(invalidEmail2);
-            expect(result[0]).to.equal(strings.MISSING_EMAIL);
+            expect(result[0]).to.equal(strings.missingEmail(language));
         });
 
     });
@@ -150,9 +153,10 @@ describe('data-validator', function () {
             const data = {
                 name: '',
                 email: invalidEmail1,
-                message: invalidMessage
+                message: invalidMessage + invalidMessage
             };
             const result = dataValidator.validate(data);
+
             expect(result).to.have.length(3);
         });
 

@@ -3,7 +3,7 @@
 const $ = require('jquery'),
     _ = require('lodash'),
     routes = require('../../../../../routes').routes,
-    dataValidator = require('./data-validator'),
+    dataValidator = require('./data-validator')(localStorage),
     display = require('./response-display'),
     formData = require('./form-data');
 

@@ -1,20 +1,27 @@
 'use strict';
 
-const strings = require('./strings');
+const translator = require('../../../../translation/exports');
 
-exports.validate = function (data) {
+const validateEmail = function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+};
 
-    function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
+module.exports = function (storage) {
+    return {
+        validate: function (data) {
+
+            let errors = [];
+
+            const msgs = translator.errorMessages.contact;
+            const lang = translator.lang(storage);
+
+            if (!data.name || data.name < 3) errors.push(msgs.missingName(lang));
+            if (!data.message || data.message.length < 5) errors.push(msgs.missingMessage(lang));
+            if (!data.email || !validateEmail(data.email)) errors.push(msgs.missingEmail(lang));
+            if (data.message && data.message.length > 2000) errors.push(msgs.messageTooLong(lang));
+
+            return errors;
+        }
     }
-
-    var errors = [];
-
-    if (!data.name || data.name < 3) errors.push(strings.MISSING_NAME);
-    if (!data.message || data.message.length < 5) errors.push(strings.MISSING_MESSAGE);
-    if (!data.email || !validateEmail(data.email)) errors.push(strings.MISSING_EMAIL);
-    if (data.message && data.message.length > 1000) errors.push(strings.LONG_MESSAGE);
-
-    return errors;
 };

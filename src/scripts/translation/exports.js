@@ -130,6 +130,21 @@ const replaceElements = function (elements, page, lang) {
     });
 };
 
+const getErrorMessage = function (key) {
+    return function (lang) {
+        return data.errorMessages[key][lang];
+    }
+};
+
+const errorMessages = {
+    contact: {
+        missingEmail: getErrorMessage(data.errorMessages.keys.missingEmail),
+        missingName: getErrorMessage(data.errorMessages.keys.missingName),
+        missingMessage: getErrorMessage(data.errorMessages.keys.missingMessage),
+        messageTooLong: getErrorMessage(data.errorMessages.keys.messageTooLong)
+    }
+};
+
 module.exports = {
     languages: {
         english: ENGLISH,
@@ -142,5 +157,6 @@ module.exports = {
     translateSingleWord: translateSingleWord,
     replace: replace,
     replaceElements: replaceElements,
-    getData: getData
+    getData: getData,
+    errorMessages: errorMessages
 };
