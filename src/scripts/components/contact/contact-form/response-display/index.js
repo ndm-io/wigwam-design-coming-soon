@@ -1,19 +1,22 @@
 'use strict';
 
 const striptags = require('striptags');
+const translator = require('../../../../translation/exports');
 
 module.exports = function (element) {
-    return function (messages) {
+    return function (messages, language = translator.languages.english) {
 
         if (!messages) {
             element.innerHTML = "";
             return;
         }
 
-        const strippedMessages = messages.map(function(msg) {
+        const translatedMessages = messages.map(function (msg) {
             return striptags(msg);
+        }).map(function (message) {
+            return translator.responseMessages.translatedMessage(message, language);
         });
 
-        element.innerHTML = strippedMessages.join('<br>');
+        element.innerHTML = translatedMessages.join('<br>');
     };
 };

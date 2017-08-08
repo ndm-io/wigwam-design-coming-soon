@@ -11,7 +11,9 @@ const CYMRAEG = "cymraeg";
 const STORAGE_KEY = "design.wigwam.language";
 
 const lang = function (storage) {
-    if (!storage) { return ENGLISH }
+    if (!storage) {
+        return ENGLISH
+    }
     const candidate = storage.getItem(STORAGE_KEY) || ENGLISH;
     if (candidate == ENGLISH || candidate == CYMRAEG) {
         return candidate;
@@ -53,9 +55,13 @@ const translate = function (page, lang, key) {
 
 const translateSingleWord = function (key, language) {
     const languageResults = data.singleWords[language];
-    if (!languageResults) { return key; }
+    if (!languageResults) {
+        return key;
+    }
     const result = languageResults[key];
-    if (!result) { return key; }
+    if (!result) {
+        return key;
+    }
     return result;
 };
 
@@ -145,6 +151,37 @@ const errorMessages = {
     }
 };
 
+const getResponseMessage = function (key) {
+    return function (lang) {
+        return data.responseMessages[key][lang];
+    }
+};
+
+const translatedMessage = function (serverMessage, language) {
+
+    const candidates = Object.keys(data.responseMessages.keys)
+        .map(function (key) {
+            return data.responseMessages[key];
+        })
+        .filter(function (item) {
+            return item[ENGLISH] === serverMessage;
+        });
+
+    if (candidates.length === 0) {
+        return serverMessage
+    }
+
+    return candidates[0][language];
+
+};
+
+const responseMessages = {
+    thankYouMessage: getResponseMessage(data.responseMessages.keys.thankYouMessage),
+    errorMessage: getResponseMessage(data.responseMessages.keys.errorMessage),
+    missingInfoMessage: getResponseMessage(data.responseMessages.keys.missingInfoMessage),
+    translatedMessage: translatedMessage
+};
+
 module.exports = {
     languages: {
         english: ENGLISH,
@@ -158,5 +195,6 @@ module.exports = {
     replace: replace,
     replaceElements: replaceElements,
     getData: getData,
-    errorMessages: errorMessages
+    errorMessages: errorMessages,
+    responseMessages: responseMessages
 };

@@ -49,7 +49,8 @@ const formattedWord = function (key, language) {
 
         if (errors.length === 0) {
             $.post(routes.postContact.route, data, function (response) {
-                responseDisplay(response.messages);
+                const language = translator.lang(localStorage);
+                responseDisplay(response.messages, language);
             }, 'json');
         } else {
             responseDisplay(errors);

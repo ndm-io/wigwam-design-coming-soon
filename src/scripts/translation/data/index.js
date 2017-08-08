@@ -155,6 +155,27 @@ const data = {
             english: "Sorry, your message is a bit too long. Please cut to the chase!",
             cymraeg: "Mae'n ddrwg gennym, mae eich neges yn ychydig yn rhy hir. Torrwch at yr olrhain!"
         }
+    },
+    responseMessages: {
+        keys: {
+            thankYouMessage: "thankYouMessage",
+            errorMessage: "errorMessage",
+            missingInfoMessage: "missingInfoMessage"
+        },
+        thankYouMessage: {
+            english: "Thank you for your message. We will be in touch right away",
+            cymraeg: "Diolch am eich neges. Byddwn ni mewn cysylltiad cyn bo hir"
+        },
+        errorMessage: {
+            english: "Oh dear, seems something went wrong. Try finding us on social media instead",
+            cymraeg: "O annwyl, ymddengys bod rhywbeth yn mynd o'i le. Ceisiwch ddod o hyd i ni ar " +
+            "gyfryngau cymdeithasol yn lle hynny"
+        },
+        missingInfoMessage: {
+            english: "Sorry, it seems we are missing some information from you. Please try again",
+            cymraeg: "Mae'n ddrwg gennym, mae'n ymddangos ein bod yn colli rhywfaint o wybodaeth gennych chi. " +
+            "Trio eto os gwelwch yn dda"
+        }
     }
 };
 
