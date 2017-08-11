@@ -10,18 +10,18 @@ const secrets = require('../config/secrets').twilio,
 
 const translator = require('../src/scripts/translation/exports');
 
-//const client = new twilio.RestClient(secrets.accountSID, secrets.authToken);
+const client = new twilio.RestClient(secrets.accountSID, secrets.authToken);
 
 /* --- Use this to mock twilio api in development --- */
-console.log("***** Development Code Warning *****");
-const client = {
-    messages: {
-        create: function (data) {
-            console.log("Sending...", data);
-            return Promise.resolve();
-        }
-    }
-};
+// console.log("***** Development Code Warning *****");
+// const client = {
+//     messages: {
+//         create: function (data) {
+//             console.log("Sending...", data);
+//             return Promise.resolve();
+//         }
+//     }
+// };
 
 
 

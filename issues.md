@@ -2,6 +2,17 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-6 - 11/08/17
+
+### Problem
+
+A user can send a contact message then continue to click the submit
+button and more messages are sent.
+
+Add logic to only allow one successful send then disable the button
+
+Also updated Contact page image
+
 ## issue-5 - 05/08/17
 
 ### Problem
