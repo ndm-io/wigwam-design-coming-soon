@@ -36,10 +36,13 @@ const formattedWord = function (key, language) {
         tmpl = require('./contact-form.html');
 
     const html = $.parseHTML(tmpl);
+    let hasSubmitted = false;
 
     const submit = function (e) {
 
         e.preventDefault();
+        if (hasSubmitted) { return; }
+
         const data = formData(e);
         const errors = dataValidator.validate(data);
         const response = $('.ajax-response')[0];
@@ -48,6 +51,8 @@ const formattedWord = function (key, language) {
         const responseDisplay = display(response);
 
         if (errors.length === 0) {
+            hasSubmitted = true;
+            $(ID_BUTTON_SUBMIT).attr("disabled", "disabled");
             $.post(routes.postContact.route, data, function (response) {
                 const language = translator.lang(localStorage);
                 responseDisplay(response.messages, language);
