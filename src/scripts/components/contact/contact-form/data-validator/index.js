@@ -19,7 +19,7 @@ module.exports = function (storage) {
             if (!data.name || data.name < 3) errors.push(msgs.missingName(lang));
             if (!data.message || data.message.length < 5) errors.push(msgs.missingMessage(lang));
             if (!data.email || !validateEmail(data.email)) errors.push(msgs.missingEmail(lang));
-            if (data.message && data.message.length > 2000) errors.push(msgs.messageTooLong(lang));
+            if (data.message && data.message.length > 1000) errors.push(msgs.messageTooLong(lang));
 
             return errors;
         }

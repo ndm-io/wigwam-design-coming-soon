@@ -63,6 +63,30 @@ const formattedWord = function (key, language) {
 
     };
 
+    const onChange = function (maxLength) {
+
+        return function (e) {
+            let element = e.currentTarget;
+            let length = element.value.length;
+
+            let innerHTML = "";
+            if (length <= maxLength) {
+                innerHTML = "";
+            } else {
+                element.value = element.value.substr(0, maxLength);
+                innerHTML = "Oops, this is too long, max " + maxLength + " characters please";
+            }
+
+            let parent = $(element).parent();
+            parent
+                .find('.help-block')
+                .each(function (i, f) {
+                    f.innerHTML = innerHTML
+                });
+        }
+
+    };
+
 
     _.each(forms, function (form) {
 
@@ -72,6 +96,15 @@ const formattedWord = function (key, language) {
             .each(function (i, f) {
                 f.addEventListener('submit', submit);
             });
+
+        $(form)
+            .find(".form-control")
+            .each(function (i, f) {
+                const jEl = $(f);
+                const maxLen = parseInt(jEl.attr('data-options'));
+                jEl.bind('input propertychange', onChange(maxLen));
+            });
+
 
     });
 

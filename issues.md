@@ -2,6 +2,20 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-7 - 01/09/17
+
+### Problem
+
+Valid messages can be very long to be forwarded on by Twilio SMS.
+So it can become an unnecessary expense
+
+### Fix
+
+Validate on typing that the message length remains below set limit. 
+Also set this limit on server side validation.
+
+Use validation on forms to indicated this to user.
+
 ## issue-6 - 11/08/17
 
 ### Problem
