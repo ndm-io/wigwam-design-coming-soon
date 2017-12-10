@@ -2,6 +2,17 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-8 - 10/12/17
+
+### Problem
+
+The testimonials in the about page are static html and therefore require
+copy paste to update
+
+### Fix
+
+Add render code to app
+
 ## issue-7 - 01/09/17
 
 ### Problem
