@@ -55,7 +55,7 @@
 
 /* mouse grab icon */
 .grabbing {
-    cursor:url(../img/grabbing.png) 8 8, move;
+    cursor:grab;
 }
 
 /* fix */
@@ -92,7 +92,7 @@
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-	background: #869791;
+	background: #67746f;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
 }
