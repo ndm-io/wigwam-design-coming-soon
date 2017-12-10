@@ -17,7 +17,17 @@ describe("shuffleArray", function () {
     it("returns a new array", function () {
 
         const oldArray = generate(10);
-        console.log(oldArray);
+        const newArray = shuffleArray(oldArray);
+
+        expect(oldArray).to.not.equal(newArray);
+
+    });
+
+    it("handles undefined input", function () {
+
+        const newArray = shuffleArray();
+
+        expect(newArray).to.exist;
 
     })
 
