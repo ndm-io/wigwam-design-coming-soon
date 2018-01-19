@@ -2,6 +2,16 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-9 - 19/01/18
+
+### Problem
+
+Update website footer with new Houzz award badge
+
+###
+
+Add the badge
+
 ## issue-8 - 10/12/17
 
 ### Problem
