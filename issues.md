@@ -2,6 +2,17 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+
+## issue-10 - 26/01/18
+
+### Problem
+
+Security vulnerability found in jquery dependency
+
+### Fix
+
+Update package.json with latest version
+
 ## issue-9 - 19/01/18
 
 ### Problem
