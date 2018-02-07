@@ -2,6 +2,15 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-11 - 07/02/18
+
+### Problem
+
+Google finds an error with hreflang international targeting tag
+
+### Fix 
+
+Remove tags. No internationalization required. Welsh version available
 
 ## issue-10 - 26/01/18
 
