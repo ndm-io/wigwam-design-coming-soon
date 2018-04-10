@@ -98,7 +98,7 @@ const data = {
             "Lloegr a Chymru gwireddu potensial llawn eu cartref.",
             whatWeDoTitle: "Yr hyn a wnawn",
             whatWeDoBody: "Wigwam yn darparu gwasanaeth dylunio personol, hamddenol o'u stiwdio yn Llangollen. " +
-            "Sam dyluniadau pob prosiect yn bersonol, tra hefyd yn canolbwyntio ar yr hyn y mae'n ei wneud orau " +
+            "Mae Sam yn dyluniadau pob prosiect yn bersonol, tra hefyd yn canolbwyntio ar yr hyn y mae'n ei wneud orau " +
             "ac yn rhoi tawelwch meddwl y bydd y prosiect yn cael ei wneud yn ddi-dor y cleient.",
             cupsOfTea: "cwpanaid o de",
             elleDecorMagazines: "cylchgronau elle decor",
