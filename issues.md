@@ -2,6 +2,16 @@
 
 Use this file to track the issues that arise with the coming soon website
 
+## issue-12 - 13/04/18
+
+### Problem
+
+Performance tune up time
+
+### Fix
+
+Improve the build phase
+
 ## issue-11 - 07/02/18
 
 ### Problem
